@@ -1,0 +1,47 @@
+:root {
+--hero-grad-start: #f8f9fa;
+--hero-grad-end: #eef2f7;
+}
+html, body { scroll-behavior: smooth; }
+
+
+/* HERO */
+.hero {
+background: linear-gradient(180deg, var(--hero-grad-start), var(--hero-grad-end));
+}
+.badge-availability { font-weight: 600; }
+.avatar-circle {
+width: 220px; height: 220px; border-radius: 50%;
+display: grid; place-items: center; font-size: 64px; font-weight: 800; color: #2b4a6e;
+background: radial-gradient(circle at 30% 30%, #cfe2ff 0%, #bcd0ff 60%, #a3b7ff 100%);
+box-shadow: 0 1rem 2rem rgba(0,0,0,.12), inset 0 0 0 12px #e9f2ff;
+}
+
+
+/* REVEAL (scroll animation) */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+
+/* TIMELINE */
+.timeline { position: relative; }
+.timeline::before {
+content: ""; position: absolute; left: 12px; top: 0; bottom: 0; width: 2px;
+background: var(--bs-border-color);
+}
+.timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+.timeline-item::before {
+content: ""; position: absolute; left: 6px; top: 1.2rem; width: 12px; height: 12px; border-radius: 50%;
+background: var(--bs-primary); box-shadow: 0 0 0 3px #fff;
+}
+.badge-year { font-weight: 600; }
+
+
+/* PROGRESS labels */
+.skill-label { display:flex; align-items:center; gap:.5rem; font-weight:600; }
+
+
+/* Helpers */
+section { scroll-margin-top: 4.5rem; }
+:focus-visible { outline: 3px solid rgba(13,110,253,.5); outline-offset: 2px; }
+#backToTop { position: fixed; right: 1rem; bottom: 1rem; width: 3rem; height: 3rem; border-radius: 9999px; display: none; }
