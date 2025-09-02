@@ -1,42 +1,30 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+--hero-grad-start: #f8f9fa;
+--hero-grad-end: #e9ecef;
 }
+html, body { scroll-behavior: smooth; }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* HERO */
+.hero {
+background: linear-gradient(180deg, var(--hero-grad-start), var(--hero-grad-end));
 }
+.hero-avatar { object-fit: cover; border-radius: 9999px; box-shadow: 0 1rem 2rem rgba(0,0,0,.15); }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
+/* REVEAL ANIMATION */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.show { opacity: 1; transform: none; }
 
-.read-the-docs {
-  color: #888;
+
+:focus-visible { outline: 3px solid rgba(13,110,253,.5); outline-offset: 2px; }
+
+
+/* helper para navbar fija */
+section { scroll-margin-top: 4.5rem; }
+
+
+#backToTop {
+position: fixed; right: 1rem; bottom: 1rem; width: 3rem; height: 3rem;
+display: none; border-radius: 9999px;
 }
