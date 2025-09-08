@@ -1,35 +1,75 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NavbarTop from './components/NavbarTop'
+import BackToTop from './components/BackToTop'
+import Education from './sections/Education'
+import Experience from './sections/Experience'
+import Skills from './sections/Skills'
+import Projects from './sections/Projects'
+import Contact from './sections/Contact'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <NavbarTop />
+
+      {/* CV layout */}
+      <div className="cv container-fluid">
+        <div className="row min-vh-100">
+
+          {/* ===== LADO IZQUIERDO (sidebar) ===== */}
+          <aside className="cv-sidebar col-12 col-lg-4 col-xl-3 p-4">
+            {/* Foto */}
+            <div className="cv-photo mb-4 mx-auto">
+              <img src="/foto perfil.png" alt="Foto de perfil" />
+            </div>
+
+            {/* Resumen corto */}
+            <section className="cv-block mb-4">
+              <p className="mb-0 opacity-90">
+                Innovador, creativo y con mentalidad de equipo. Experiencia creando
+                interfaces en React/TypeScript, componentes reutilizables y rendimiento.
+              </p>
+            </section>
+
+            {/* Tecnologías (usamos tu sección Skills como “Technologies”) */}
+            <section className="cv-block mb-4">
+              <h3 className="cv-title">Technologies</h3>
+              <Skills />
+            </section>
+
+            {/* Educación */}
+            <section className="cv-block">
+              <h3 className="cv-title">Education</h3>
+              <Education />
+            </section>
+          </aside>
+
+          {/* ===== LADO DERECHO (contenido) ===== */}
+          <main className="cv-content col-12 col-lg-8 col-xl-9 p-4">
+            {/* Título principal */}
+            <header className="mb-4">
+              <h1 className="cv-heading">Front End Developer</h1>
+            </header>
+
+            <section className="cv-block">
+              <h2 className="cv-section">Work Experience</h2>
+              <Experience />
+            </section>
+
+            {/* Opcional: más secciones */}
+            <section className="cv-block">
+              <h2 className="cv-section">Projects</h2>
+              <Projects />
+            </section>
+
+            <section className="cv-block">
+              <h2 className="cv-section">Contact</h2>
+              <Contact />
+            </section>
+          </main>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <BackToTop />
     </>
   )
 }
-
-export default App

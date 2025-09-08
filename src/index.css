@@ -1,47 +1,73 @@
+/* ====== Tema CV estilo “sidebar azul” ====== */
 :root {
---hero-grad-start: #f8f9fa;
---hero-grad-end: #eef2f7;
-}
-html, body { scroll-behavior: smooth; }
-
-
-/* HERO */
-.hero {
-background: linear-gradient(180deg, var(--hero-grad-start), var(--hero-grad-end));
-}
-.badge-availability { font-weight: 600; }
-.avatar-circle {
-width: 220px; height: 220px; border-radius: 50%;
-display: grid; place-items: center; font-size: 64px; font-weight: 800; color: #2b4a6e;
-background: radial-gradient(circle at 30% 30%, #cfe2ff 0%, #bcd0ff 60%, #a3b7ff 100%);
-box-shadow: 0 1rem 2rem rgba(0,0,0,.12), inset 0 0 0 12px #e9f2ff;
+  --cv-blue: #1e5e8b;         /* azul lateral */
+  --cv-blue-dk: #164665;      /* azul más oscuro para bordes */
+  --cv-divider: #e6eef5;      /* divisor en contenido */
 }
 
+.cv { --bs-body-color: #222; }
 
-/* REVEAL (scroll animation) */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.show { opacity: 1; transform: none; }
-
-
-/* TIMELINE */
-.timeline { position: relative; }
-.timeline::before {
-content: ""; position: absolute; left: 12px; top: 0; bottom: 0; width: 2px;
-background: var(--bs-border-color);
+/* Sidebar */
+.cv-sidebar {
+  background: var(--cv-blue);
+  color: #fff;
+  border-right: 1px solid var(--cv-blue-dk);
 }
-.timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
-.timeline-item::before {
-content: ""; position: absolute; left: 6px; top: 1.2rem; width: 12px; height: 12px; border-radius: 50%;
-background: var(--bs-primary); box-shadow: 0 0 0 3px #fff;
+.cv-sidebar a { color: #fff; text-decoration: underline; }
+.cv-sidebar .cv-title {
+  font-size: 1rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  padding-bottom: .35rem;
 }
-.badge-year { font-weight: 600; }
+.cv-sidebar .cv-block { line-height: 1.55; }
+.cv-sidebar .opacity-90 { opacity: .9; }
 
+/* Foto circular */
+.cv-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  overflow: hidden; border: 3px solid rgba(255,255,255,.85);
+}
+.cv-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+}
 
-/* PROGRESS labels */
-.skill-label { display:flex; align-items:center; gap:.5rem; font-weight:600; }
+/* Contenido derecho */
+.cv-content { background: #fff; }
+.cv-heading {
+  font-size: 1.6rem;
+  color: #2c6ea4;
+  margin: 0;
+  font-weight: 700;
+}
+.cv-section {
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: .3px;
+  font-weight: 700;
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--cv-divider);
+}
 
+/* Bloques con separación uniforme */
+.cv-block + .cv-block { margin-top: 2rem; }
 
-/* Helpers */
-section { scroll-margin-top: 4.5rem; }
-:focus-visible { outline: 3px solid rgba(13,110,253,.5); outline-offset: 2px; }
-#backToTop { position: fixed; right: 1rem; bottom: 1rem; width: 3rem; height: 3rem; border-radius: 9999px; display: none; }
+/* Ajustes suaves a listas y tipografía del contenido */
+.cv-content ul { padding-left: 1.2rem; }
+.cv-content li { margin-bottom: .4rem; }
+.cv-content .text-body-secondary { color: #6c757d !important; }
+
+/* Responsivo: reduce padding lateral en pantallas pequeñas */
+@media (max-width: 991.98px) {
+  .cv-sidebar { border-right: none; }
+}
+
+#skills svg {
+  transition: transform 0.2s ease;
+}
+#skills svg:hover {
+  transform: scale(1.2);
+}
