@@ -1,7 +1,7 @@
 export default function Education() {
   return (
-    <section id="education" className="reveal mb-5">
-      <h2 className="h3 mb-3">Educación</h2>
+    <section id="Education" className="reveal mb-5">
+      <h2 className="h3 mb-3">Formacion Academica</h2>
 
       <ul className="list-unstyled">
         {/* Universidad */}
