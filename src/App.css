@@ -28,3 +28,34 @@ section { scroll-margin-top: 4.5rem; }
 position: fixed; right: 1rem; bottom: 1rem; width: 3rem; height: 3rem;
 display: none; border-radius: 9999px;
 }
+
+/* Timeline minimal */
+.tl {
+  position: relative;
+  margin-left: .25rem;           /* separa del borde izquierdo */
+  padding-left: 1.25rem;         /* espacio para la línea */
+}
+.tl::before {
+  content: "";
+  position: absolute;
+  left: .4rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--bs-border-color, rgba(0,0,0,.1));
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.tl-dot {
+  position: absolute;
+  left: .05rem;
+  top: 1rem;                      /* ajusta vertical según te guste */
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+}
+.tl .card {
+  margin-left: .5rem;             /* separa la tarjeta de la línea */
+}
