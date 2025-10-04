@@ -63,7 +63,7 @@ export default function Contact() {
                     <Button
                       size="sm"
                       variant="primary"
-                      href="https://www.linkedin.com/in/amner-perez-015987307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      href="https://www.linkedin.com/in/amner-perez-015987307"
                       target="_blank"
                     >
                       Ver perfil

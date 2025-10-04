@@ -6,7 +6,7 @@ export default function Hero() {
         overflow: 'hidden', border: '3px solid var(--bs-primary)'
       }}>
         <img
-          src="/foto perfil.png"   // 👈 aquí el nombre de tu archivo en public
+          src="/foto perfil.png"  
           alt="Foto de Amner Pérez"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
