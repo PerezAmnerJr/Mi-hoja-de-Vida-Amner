@@ -42,6 +42,14 @@ const projects: Project[] = [
     repoUrl: "https://github.com/PerezAmnerJr/Formulario", // ← ajusta
     demoUrl: null,
   },
+  {
+    title: "PortafoliodeTareas",
+    description:
+      "Portafolio  de Tareas",
+    tech: ["HTML", "CSS"],
+    repoUrl: "https://github.com/PerezAmnerJr/Portafolio-de-Tareas.git", // ← ajusta
+    demoUrl: null,
+  },
 ]
 
 export default function Projects() {
