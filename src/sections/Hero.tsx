@@ -1,22 +1,31 @@
-export default function Hero() {
-  return (
-    <section id="top" className="reveal py-5 mb-4 rounded-4 text-center">
-      <div className="mx-auto mb-3" style={{
-        width: 120, height: 120, borderRadius: '50%',
-        overflow: 'hidden', border: '3px solid var(--bs-primary)'
-      }}>
-        <img
-          src="/foto perfil.png"  
-          alt="Foto de Amner Pérez"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
-      </div>
+// src/sections/Hero.tsx
+import React from "react";
 
-      <h1 className="fw-bold mb-2">Amner Alberto Pérez Marroquín</h1>
-      <p className="lead text-body-secondary mb-3">
-        Desarrollador Frontend — React / TypeScript
-      </p>
-      <span className="badge text-bg-primary">Disponible</span>
+type HeroProps = {
+  nombre?: string;
+  fotoUrl?: string;
+};
+
+const Hero: React.FC<HeroProps> = ({ nombre = "Amner", fotoUrl }) => {
+  const src = fotoUrl || "/fotoperfil.jpg";
+
+  return (
+    <section className="hero">
+      <div className="hero-inner">
+        <img
+          src={src}
+          alt={`${nombre} - foto de perfil`}
+          className="hero-avatar"
+          width={160}
+          height={160}
+        />
+        <div className="hero-text">
+          <h1>Hola, soy {nombre}</h1>
+          <p>Soy desarrollador frontend — aquí va una breve introducción.</p>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
+
+export default Hero;

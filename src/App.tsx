@@ -6,6 +6,7 @@ import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 
+
 export default function App() {
   return (
     <>
@@ -15,14 +16,15 @@ export default function App() {
       <div className="cv container-fluid">
         <div className="row min-vh-100">
 
-          {/* ===== LADO IZQUIERDO (sidebar) ===== */}
+          {/* ===== LADO IZQUIERDO ===== */}
           <aside className="cv-sidebar col-12 col-lg-4 col-xl-3 p-4">
-            {/* Foto */}
+
+            {/* FOTO */}
             <div className="cv-photo mb-4 mx-auto">
               <img src="/foto perfil.png" alt="Foto de perfil" />
             </div>
 
-            {/* Resumen corto */}
+            {/* Resumen */}
             <section className="cv-block mb-4">
               <p className="mb-0 opacity-90">
                 Innovador, creativo y con mentalidad de equipo. Experiencia creando
@@ -30,7 +32,7 @@ export default function App() {
               </p>
             </section>
 
-            {/* Tecnologías (usamos tu sección Skills como “Technologies”) */}
+            {/* Tecnologías */}
             <section className="cv-block mb-4">
               <h3 className="cv-title">Technologies</h3>
               <Skills />
@@ -41,11 +43,12 @@ export default function App() {
               <h3 className="cv-title">Education</h3>
               <Education />
             </section>
+
           </aside>
 
-          {/* ===== LADO DERECHO (contenido) ===== */}
+          {/* ===== LADO DERECHO ===== */}
           <main className="cv-content col-12 col-lg-8 col-xl-9 p-4">
-            {/* Título principal */}
+
             <header className="mb-4">
               <h1 className="cv-heading">Front End Developer</h1>
             </header>
@@ -55,7 +58,6 @@ export default function App() {
               <Experience />
             </section>
 
-            {/* Opcional: más secciones */}
             <section className="cv-block">
               <h2 className="cv-section">Projects</h2>
               <Projects />
@@ -65,7 +67,9 @@ export default function App() {
               <h2 className="cv-section">Contact</h2>
               <Contact />
             </section>
+
           </main>
+
         </div>
       </div>
 

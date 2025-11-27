@@ -8,10 +8,10 @@ export default function Experience() {
         <h3 className="h6 text-uppercase text-muted mb-2">Desarrollo</h3>
 
         <article>
-          <h4 className="h5 mb-1">Frontend Developer — Empresa Neo Net</h4>
-          <div className="text-body-secondary mb-2">2023 — Presente</div>
+          <h4 className="h5 mb-1">Frontend Developer junior</h4>
+          <div className="text-body-secondary mb-2">2025 — Presente</div>
           <ul className="mb-0">
-            <li>Interfaces con React + Vite.</li>
+            <li>Interfaces con React + Vite. + TypeScript</li>
             <li>Integración de Bootstrap y buenas prácticas de accesibilidad.</li>
           </ul>
         </article>

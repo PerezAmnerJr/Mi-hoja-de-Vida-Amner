@@ -14,7 +14,7 @@ const projects: Project[] = [
     title: "Mi hoja de vida Amner",
     description:
       "CV online. Maquetación con HTML/CSS y componentes reutilizables.",
-    tech: ["HTML", "CSS"],
+    tech: ["HTML", "CSS", "React + Vite + TypeScript, Bootstrap"],
     repoUrl: "https://github.com/PerezAmnerJr/Mi-hoja-de-vida-Amner", // ← ajusta si tu slug es distinto
     demoUrl: null, // pon aquí tu GitHub Pages si lo publicas
   },
@@ -46,7 +46,7 @@ const projects: Project[] = [
     title: "PortafoliodeTareas",
     description:
       "Portafolio  de Tareas",
-    tech: ["HTML", "CSS"],
+    tech: ["HTML", "CSS", "React  + Vite + TypeScript, Bootstrap"],
     repoUrl: "https://github.com/PerezAmnerJr/Portafolio-de-Tareas.git", // ← ajusta
     demoUrl: null,
   },
