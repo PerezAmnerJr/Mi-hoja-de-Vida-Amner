@@ -32,7 +32,7 @@ export default function App() {
             {/* Resumen */}
             <section className="cv-block mb-4">
               <p className="mb-0 opacity-90">
-                Innovador, creativo y con mentalidad de equipo. Experiencia creando
+                Me caracterizo por mi compromiso, responsabilidad y deseo constante de superación. Valoro los retos como oportunidades para aprender y fortalecer mis capacidades. Actualmente curso la carrera de Ingeniería en Sistemas y cuento con conocimientos en bases de datos, programación y ciberseguridad. Soy Innovador, creativo y con mentalidad de equipo. Experiencia creando
                 interfaces en React/TypeScript, componentes reutilizables y rendimiento.
               </p>
             </section>

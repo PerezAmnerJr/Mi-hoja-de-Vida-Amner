@@ -91,7 +91,7 @@ export default function Experience() {
 
       {/* --- CERTIFICACIONES --- */}
       <div className="mt-4">
-        <h3 className="h6 text-uppercase text-muted mb-2">Certificaciones Relevantes</h3>
+        <h3 className="h6 text-uppercase text-muted mb-2">Certificaciones Optenidas</h3>
 
         <ul className="mb-0">
           <li>Certificación en Redes — fundamentos, topologías y configuración básica.</li>
