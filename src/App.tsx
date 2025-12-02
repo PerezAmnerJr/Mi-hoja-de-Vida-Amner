@@ -1,11 +1,15 @@
-import NavbarTop from './components/NavbarTop'
-import BackToTop from './components/BackToTop'
-import Education from './sections/Education'
-import Experience from './sections/Experience'
-import Skills from './sections/Skills'
-import Projects from './sections/Projects'
-import Contact from './sections/Contact'
+// src/App.tsx
+import React from "react";
+import NavbarTop from './components/NavbarTop';
+import BackToTop from './components/BackToTop';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 
+// Importa la imagen desde src/assets
+import fotoPerfil from "./assets/fotoperfil.jpg";
 
 export default function App() {
   return (
@@ -21,7 +25,8 @@ export default function App() {
 
             {/* FOTO */}
             <div className="cv-photo mb-4 mx-auto">
-              <img src="/foto perfil.png" alt="Foto de perfil" />
+              {/* usa la variable importada */}
+              <img src={fotoPerfil} alt="Foto de perfil" className="cv-photo-img" />
             </div>
 
             {/* Resumen */}
@@ -75,5 +80,5 @@ export default function App() {
 
       <BackToTop />
     </>
-  )
+  );
 }
