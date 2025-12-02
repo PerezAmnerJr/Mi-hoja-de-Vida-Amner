@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./NavbarTop.css";
 
 export default function NavbarTop() {

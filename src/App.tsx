@@ -1,5 +1,4 @@
 // src/App.tsx
-import React from "react";
 import NavbarTop from './components/NavbarTop';
 import BackToTop from './components/BackToTop';
 import Education from './sections/Education';
