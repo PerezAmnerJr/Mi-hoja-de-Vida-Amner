@@ -100,6 +100,7 @@ export default function Experience() {
           <li>Word — redacción, formato profesional y elaboración de documentos.</li>
           <li>Bibliotecas de Desarrollo Front-End — React, Bootstrap, Tailwind y componentes UI.</li>
           <li>Cumbre de Tecnología y Ciberseguridad — actualización en tendencias modernas.</li>
+          <li>Ingles Intermedio III.</li>
         </ul>
       </div>
     </section>
